@@ -4,7 +4,7 @@ from database import get_player, update_player, get_all_players
 import json
 
 # آیدی تلگرام خودت رو اینجا بذار
-ADMIN_IDS = [123456789]  # مثال: [987654321]
+ADMIN_IDS = [6352735882]  # مثال: [987654321]
 
 def is_admin(user_id):
     return user_id in ADMIN_IDS
