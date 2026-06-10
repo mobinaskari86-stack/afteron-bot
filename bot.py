@@ -7,7 +7,7 @@ from handlers.admin import is_admin
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # توکن جدیدت رو اینجا بذار
+BOT_TOKEN = "8661666180:AAEdq37CpfxMYpUyMZdF07NNZ3YejoLOYyE"  # توکن جدیدت رو اینجا بذار
 
 # دستور /set برای ادمین: /set <user_id> <field> <key> <value>
 async def admin_set(update: Update, context):
