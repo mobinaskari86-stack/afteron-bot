@@ -111,10 +111,10 @@ def main():
 
     # زمان‌بندی جمعه ساعت 12 ظهر به وقت ایران
     iran_tz = pytz.timezone("Asia/Tehran")
-    app.job_queue.run_weekly(
-        weekly_income_job,
-        time=datetime.time(hour=12, minute=0, tzinfo=iran_tz),
-        days=(4,),  # جمعه = 4
+    app.job_queue.run_daily(
+    weekly_income_job,
+    time=datetime.time(hour=12, minute=0, tzinfo=iran_tz),
+    days=(4,),
     )
 
     app.add_handler(CommandHandler("start", start.start_command))
@@ -145,7 +145,7 @@ def main():
     app.add_handler(CallbackQueryHandler(workshop_action, pattern="^(workshop_|build_)"))
     app.add_handler(CallbackQueryHandler(admin.admin_panel_cb, pattern="^admin_"))
 
-    print("✅ ربات افترون شروع به کار کرد!")
+    print("✅ ربات گیم افترونز شروع به کار کرد!")
     app.run_polling()
 
 if __name__ == "__main__":
