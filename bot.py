@@ -9,7 +9,7 @@ from income import distribute_income
 import pytz
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+BOT_TOKEN = os.environ.get("8661666180:AAEdq37CpfxMYpUyMZdF07NNZ3YejoLOYyE", "")
 
 async def admin_set(update, context):
     if not is_admin(update.effective_user.id): return
