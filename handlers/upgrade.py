@@ -74,9 +74,11 @@ async def show_upgrades(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if level in costs and level < max_lv:
             emoji = BUILDING_EMOJIS.get(name, "🏠")
             income_preview = get_income_preview(name, level, player['region'])
-            label = f"{emoji} {name} | {level}→{level+1}"
-            if income_preview:
-                label += f" | {income_preview}"
+            cost_preview = " | ".join([f"{r}:{a}" for r, a in costs.items()])
+label = f"{emoji} {name} | {level}→{level+1}"
+if income_preview:
+    label += f" | {income_preview}"
+label += f"\n💸 {cost_preview}"
             keyboard.append([InlineKeyboardButton(label, callback_data=f"upg_{name}")])
 
     keyboard.append([InlineKeyboardButton("🔙 بازگشت", callback_data="main_menu")])
