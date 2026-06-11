@@ -5,7 +5,7 @@ from database import (get_player, update_player, get_all_players, get_shop_items
                       get_event, get_event_participants, end_event, create_event, get_conn)
 import json
 
-ADMIN_IDS = [123456789]  # آیدی خودت رو اینجا بذار
+ADMIN_IDS = [6352735882]  # آیدی خودت رو اینجا بذار
 
 def is_admin(user_id):
     return user_id in ADMIN_IDS
