@@ -151,7 +151,7 @@ def main():
 
     app.add_handler(CallbackQueryHandler(start.start_command, pattern="^start_game$"))
     app.add_handler(CallbackQueryHandler(start.select_clan, pattern="^clan_"))
-    app.add_handler(CallbackQueryHandler(start.leave_clan, pattern="^leave_clan$"))
+    app.add_handler(CallbackQueryHandler(start.leave_clan, pattern="^leave_clan$|^leave_clan_confirm$"))
     app.add_handler(CallbackQueryHandler(main_menu, pattern="^main_menu$"))
     app.add_handler(CallbackQueryHandler(map_handler.send_map, pattern="^map$"))
     app.add_handler(CallbackQueryHandler(assets.show_assets, pattern="^assets$"))
