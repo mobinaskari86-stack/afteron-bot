@@ -120,16 +120,6 @@ def get_guide(name):
     return GENERAL_GUIDE
 
 def get_income_preview(name, level, region):
-    new_level = level + 1
-    db_income = get_building_income()
-    if name == "ساختمان ویژه":
-        inc = SPECIAL_BUILDING_INCOME.get(region, {})
-        if inc: return " | ".join([f"+{v*new_level} {k}/هفته" for k,v in inc.items()])
-    elif name in db_income:
-        parts = []
-        for res, base in db_income[name].items():
-            if res != "رضایت": parts.append(f"+{base*new_level} {res}/هفته")
-        return " | ".join(parts)
     return ""
 
 async def show_upgrades(update: Update, context: ContextTypes.DEFAULT_TYPE):
