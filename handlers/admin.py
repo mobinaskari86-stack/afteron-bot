@@ -8,7 +8,7 @@ from database import (get_player, update_player, get_all_players, get_shop_items
                       get_trade_stock, update_trade_stock)
 import json
 
-ADMIN_IDS = [123456789]
+ADMIN_IDS = [6352735882]
 
 def is_admin(user_id):
     return user_id in ADMIN_IDS
